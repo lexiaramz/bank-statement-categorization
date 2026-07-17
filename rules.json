@@ -1,19 +1,19 @@
 [
   {
     "category": "Gas",
-    "keywords": ["shellm", "shell oil", "chevron", "76 ", "arco", "conoco", "texaco", "costco gas", "wright express fleet"]
+    "keywords": ["shellm", "shell oil", "chevron", "76", "arco", "conoco", "texaco", "costco gas", "wright express fleet"]
   },
   {
     "category": "Auto Expense",
-    "keywords": ["citi autopay", "gm financial", "good to go", "wa state dol", "sound billing/my auto fleet", "wsdot"]
+    "keywords": ["citi autopay", "gm financial", "good to go", "wa state dol", "sound billing/my auto fleet", "wsdot", "ally"]
   },
   {
     "category": "Office Supplies",
-    "keywords": ["uline", "office depot", "staples"]
+    "keywords": ["office depot", "staples"]
   },
   {
     "category": "Build Permits",
-    "keywords": ["labor&industries permit"]
+    "keywords": ["labor&industries permit", "cityofmarysville", "l&i elf"]
   },
   {
     "category": "Travel",
@@ -21,7 +21,7 @@
   },
   {
     "category": "Business Applications (Services)",
-    "keywords": ["qbooks pay", "verizon", "comcast", "adt security", "podium payments", "methodworks", "hyphen solutions"]
+    "keywords": ["qbooks pay", "verizon", "comcast", "adt security", "methodworks", "hyphen solutions", "dry box", "pudno1-snohomish", "avista", "waste management", "bus delivery"]
   },
   {
     "category": "Legal",
@@ -29,7 +29,7 @@
   },
   {
     "category": "Job Costs (Supplies)",
-    "keywords": ["gensco", "ferguson enterpr", "platt electric", "keller supply", "dry box", "usstandardproduc"]
+    "keywords": ["gensco", "ferguson enterpr", "platt electric", "keller supply", "usstandardproduc", "uline"]
   },
   {
     "category": "Food",
@@ -42,6 +42,14 @@
   {
     "category": "Rent",
     "keywords": ["rent"]
+  },
+  {
+    "category": "Payroll",
+    "keywords": ["payroll", "19298940", "tran fee", "instamed regence", "new york life ins"]
+  },
+  {
+    "category": "Income",
+    "keywords": ["deposit", "lennar pmd payment", "drhorton pmd payment", "washington resid eft paymnt", "centurycommu pmd payment", "podium payments"]
   },
   {
     "category": "Div",

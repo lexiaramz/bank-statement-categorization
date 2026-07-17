@@ -1,6 +1,7 @@
 """Keyword-rule based transaction categorization."""
 import json
 import os
+import re
 
 import pandas as pd
 
@@ -29,7 +30,7 @@ def categorize_description(description: str, rules: list[dict]) -> str:
     for rule in rules:
         for keyword in rule.get("keywords", []):
             keyword = keyword.strip().lower()
-            if keyword and keyword in text:
+            if keyword and re.search(rf"\b{re.escape(keyword)}\b", text):
                 return rule["category"]
     return UNCATEGORIZED
 

@@ -39,6 +39,7 @@ connect the repo/push and Railway will detect it as a Python app and run the
 keyword rules in the sidebar and clicking "Save rules" writes to the
 container's filesystem, which is wiped on every new deploy. For rule
 changes you want to keep permanently, either:
+
 - edit `rules.json` in the repo and redeploy, or
 - attach a Railway volume mounted over the project directory so runtime
   edits survive deploys.
@@ -66,3 +67,7 @@ statements through.
 statement layout. A statement from a different bank will very likely parse
 incorrectly or return zero rows — that's expected, not a silent failure to
 worry about. Bring a sample and the parser can be adapted.
+
+---
+
+## | web-production-a1383.up.railway.app |
