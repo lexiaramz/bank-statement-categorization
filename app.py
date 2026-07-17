@@ -81,29 +81,47 @@ uploaded_files = st.file_uploader(
 )
 
 if uploaded_files:
-    new_rows = []
-    for f in uploaded_files:
-        file_id = f"{f.name}:{f.size}"
-        if file_id in st.session_state.processed_files:
-            continue
-        try:
-            df = parse_statement_pdf(io.BytesIO(f.getvalue()))
-        except Exception as e:
-            st.error(f"Failed to parse {f.name}: {e}")
-            continue
-        if df.empty:
-            st.warning(f"No transactions found in {f.name}. Is this a Wells Fargo business "
-                       f"checking statement?")
-            continue
-        df["SourceFile"] = f.name
-        df = apply_categories(df, st.session_state.rules)
-        new_rows.append(df)
-        st.session_state.processed_files.add(file_id)
+    already_done = all(
+        f"{f.name}:{f.size}" in st.session_state.processed_files for f in uploaded_files
+    )
+    run_clicked = st.button(
+        "Categorize Transactions",
+        type="primary",
+        use_container_width=True,
+        disabled=already_done,
+    )
+    if already_done:
+        st.caption("These file(s) are already processed below. Upload a different file to enable this button again.")
 
-    if new_rows:
-        st.session_state.transactions = pd.concat(
-            [st.session_state.transactions] + new_rows, ignore_index=True,
-        )
+    if run_clicked:
+        new_rows = []
+        with st.spinner("Parsing and categorizing..."):
+            for f in uploaded_files:
+                file_id = f"{f.name}:{f.size}"
+                if file_id in st.session_state.processed_files:
+                    continue
+                try:
+                    df = parse_statement_pdf(io.BytesIO(f.getvalue()))
+                except Exception as e:
+                    st.error(f"Failed to parse {f.name}: {e}")
+                    continue
+                if df.empty:
+                    st.warning(f"No transactions found in {f.name}. Is this a Wells Fargo "
+                               f"business checking statement?")
+                    continue
+                df["SourceFile"] = f.name
+                df = apply_categories(df, st.session_state.rules)
+                new_rows.append(df)
+                st.session_state.processed_files.add(file_id)
+
+        if new_rows:
+            st.session_state.transactions = pd.concat(
+                [st.session_state.transactions] + new_rows, ignore_index=True,
+            )
+            added = sum(len(d) for d in new_rows)
+            st.success(f"Categorized {added} transaction(s) from {len(new_rows)} file(s).")
+        else:
+            st.warning("Nothing was added — check the errors/warnings above.")
 
 transactions = st.session_state.transactions
 
