@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Real bank statements / exports - never commit actual financial data
+sample_statements_local/
+*.pdf
+!sample_statements_local/.gitkeep
+outputs/
+*.xlsx
+
+.streamlit/secrets.toml
+streamlit_log.txt
+

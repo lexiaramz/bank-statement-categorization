@@ -1,0 +1,50 @@
+[
+  {
+    "category": "Gas",
+    "keywords": ["shellm", "shell oil", "chevron", "76 ", "arco", "conoco", "texaco", "costco gas", "wright express fleet"]
+  },
+  {
+    "category": "Auto Expense",
+    "keywords": ["citi autopay", "gm financial", "good to go", "wa state dol", "sound billing/my auto fleet", "wsdot"]
+  },
+  {
+    "category": "Office Supplies",
+    "keywords": ["uline", "office depot", "staples"]
+  },
+  {
+    "category": "Build Permits",
+    "keywords": ["labor&industries permit"]
+  },
+  {
+    "category": "Travel",
+    "keywords": ["airlines", "hotel", "marriott", "hilton", "airbnb", "expedia"]
+  },
+  {
+    "category": "Business Applications (Services)",
+    "keywords": ["qbooks pay", "verizon", "comcast", "adt security", "podium payments", "methodworks", "hyphen solutions"]
+  },
+  {
+    "category": "Legal",
+    "keywords": ["law offices", "attorney", "law firm"]
+  },
+  {
+    "category": "Job Costs (Supplies)",
+    "keywords": ["gensco", "ferguson enterpr", "platt electric", "keller supply", "dry box", "usstandardproduc"]
+  },
+  {
+    "category": "Food",
+    "keywords": ["starbucks", "restaurant", "safeway", "qfc", "grocery"]
+  },
+  {
+    "category": "Classes and Workshops",
+    "keywords": ["training", "workshop", "seminar"]
+  },
+  {
+    "category": "Rent",
+    "keywords": ["rent"]
+  },
+  {
+    "category": "Div",
+    "keywords": []
+  }
+]
